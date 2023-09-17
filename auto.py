@@ -1,7 +1,7 @@
 import os
 
 # 1. 设置你的GitHub仓库URL
-repo_url = 'https://github.com/ERerGB/mAIketing.git'
+repo_url = 'https://github.com/ERerGB/ERerGB.github.io'
 
 # 2. 设置本地仓库路径
 local_repo_path = '.'
@@ -24,11 +24,9 @@ with open(os.path.join(local_repo_path, 'index.html'), 'w') as file:
     file.write(html_code)
 
 # 5. 使用os.system或subprocess模块执行Git命令
-os.chdir(local_repo_path)
 os.system('git add .')
 os.system('git commit -m "Add index.html"')
-os.system(f'git remote add origin {repo_url}')
-os.system('git push -u origin master')
+os.system('git push -u origin main')
 
 # 注意：
 # 1. 你应该先在本地仓库路径初始化一个Git仓库（git init）
